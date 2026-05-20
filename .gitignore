@@ -1,11 +1,24 @@
+<<<<<<< HEAD
 # Environment files
 .env
+=======
+.env
+node_modules/
+backend/.venv/
+frontend/dist/
+frontend/node_modules/
+venv/*
+.venv/*
+.vscode/*
+.DS_Store
+>>>>>>> ca5959d7388329bb302e5936943ccbcb93de2883
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
 .env.development
 .env.test
+<<<<<<< HEAD
 .env.production
 
 # Python virtual environments
@@ -29,3 +42,6 @@ frontend/dist/
 
 # OS files
 .DS_Store
+=======
+.env.production
+>>>>>>> ca5959d7388329bb302e5936943ccbcb93de2883
