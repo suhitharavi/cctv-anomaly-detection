@@ -1,0 +1,31 @@
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.development
+.env.test
+.env.production
+
+# Python virtual environments
+venv/
+.venv/
+backend/.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Node modules
+node_modules/
+frontend/node_modules/
+
+# Frontend build
+frontend/dist/
+
+# VS Code
+.vscode/
+
+# OS files
+.DS_Store

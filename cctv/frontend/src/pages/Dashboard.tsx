@@ -179,7 +179,21 @@ export function Dashboard() {
 
         {/* Main Grid Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          {/* Left Column: Video */}
+          {/* Left Column: Detection & Alerts (moved left) */}
+          <div className="space-y-4">
+            <DetectionResult
+              result={detectionResult}
+              isProcessingVideo={
+                isDetecting &&
+                backendConnected &&
+                videoStream.source === "file" &&
+                processingVideoStarted
+              }
+            />
+            <AlertsPanel alerts={alerts} />
+          </div>
+
+          {/* Right Column: Video (moved right) */}
           <div className="space-y-4">
             <VideoDisplay
               source={videoStream.source}
@@ -199,20 +213,6 @@ export function Dashboard() {
               onStopDetection={handleStopDetection}
               isDetecting={isDetecting}
             />
-          </div>
-
-          {/* Right Column: Detection & Alerts */}
-          <div className="space-y-4">
-            <DetectionResult
-              result={detectionResult}
-              isProcessingVideo={
-                isDetecting &&
-                backendConnected &&
-                videoStream.source === "file" &&
-                processingVideoStarted
-              }
-            />
-            <AlertsPanel alerts={alerts} />
           </div>
         </div>
 
